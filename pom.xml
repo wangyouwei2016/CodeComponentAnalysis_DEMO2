@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
-            <version>1.7.1</version>
+            <version>1.10.0</version>
         </dependency>
 
         <!-- OWASP Top 10 2021 A6 - Security Misconfiguration -->

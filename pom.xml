@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>my-java-app</artifactId>
+    <version>1.0.0</version>
+
+    <dependencies>
+        <!-- OWASP Top 10 2021 A1 - Injection -->
+        <dependency>
+            <groupId>org.owasp.encoder</groupId>
+            <artifactId>owasp-java-encoder</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- OWASP Top 10 2021 A2 - Broken Authentication -->
+        <!-- Include a secure authentication library, for example, Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+
+        <!-- OWASP Top 10 2021 A3 - Sensitive Data Exposure -->
+        <!-- Use secure libraries for handling sensitive data -->
+        <!-- Example: Apache Commons Codec for secure encoding/decoding -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+
+        <!-- OWASP Top 10 2021 A4 - XML External Entities (XXE) -->
+        <!-- Use a secure XML parsing library -->
+        <!-- Example: Woodstox StAX parser -->
+        <dependency>
+            <groupId>org.codehaus.woodstox</groupId>
+            <artifactId>woodstox-core-asl</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+
+        <!-- OWASP Top 10 2021 A5 - Broken Access Control -->
+        <!-- Include a secure authorization library, for example, Apache Shiro -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+
+        <!-- OWASP Top 10 2021 A6 - Security Misconfiguration -->
+        <!-- Pay attention to security configurations in your application -->
+        <!-- No specific dependency here, ensure your application server and frameworks are properly configured -->
+
+        <!-- OWASP Top 10 2021 A7 - Cross-Site Scripting (XSS) -->
+        <!-- Use secure HTML escaping libraries -->
+        <!-- Example: OWASP Java Encoder (already included above) -->
+
+        <!-- OWASP Top 10 2021 A8 - Insecure Deserialization -->
+        <!-- Use secure serialization/deserialization libraries -->
+        <!-- Example: Jackson Databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.5</version>
+        </dependency>
+
+        <!-- OWASP Top 10 2021 A9 - Using Components with Known Vulnerabilities -->
+        <!-- Regularly check for updates and security patches for your dependencies -->
+        <!-- Use tools like OWASP Dependency-Check to identify vulnerabilities -->
+        <!-- Example: Dependency-Check Maven Plugin -->
+        <!-- Note: This is a plugin, not a runtime dependency -->
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.owasp</groupId>
+                    <artifactId>dependency-check-maven</artifactId>
+                    <version>6.0.2</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+
+        <!-- OWASP Top 10 2021 A10 - Insufficient Logging & Monitoring -->
+        <!-- Include a secure logging library and implement proper monitoring -->
+        <!-- Example: SLF4J with Logback -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+    </dependencies>
+</project>

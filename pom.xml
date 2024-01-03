@@ -8,69 +8,68 @@
     <version>1.0.0</version>
 
     <dependencies>
-        <!-- OWASP Top 10 2021 A1 - Injection -->
+        <!-- OWASP Top 10 2021 A1 - 注入 -->
         <dependency>
             <groupId>org.owasp.encoder</groupId>
             <artifactId>owasp-java-encoder</artifactId>
             <version>1.2.3</version>
         </dependency>
 
-        <!-- OWASP Top 10 2021 A2 - Broken Authentication -->
-        <!-- Include a secure authentication library, for example, Spring Security -->
+        <!-- OWASP Top 10 2021 A2 - 破坏性认证 -->
+        <!-- 包含安全的身份验证库，例如Spring Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
             <version>5.5.0</version>
         </dependency>
 
-        <!-- OWASP Top 10 2021 A3 - Sensitive Data Exposure -->
-        <!-- Use secure libraries for handling sensitive data -->
-        <!-- Example: Apache Commons Codec for secure encoding/decoding -->
+        <!-- OWASP Top 10 2021 A3 - 敏感数据泄露 -->
+        <!-- 使用处理敏感数据的安全库 -->
+        <!-- 示例: Apache Commons Codec 用于安全的编码/解码 -->
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>1.15</version>
         </dependency>
 
-        <!-- OWASP Top 10 2021 A4 - XML External Entities (XXE) -->
-        <!-- Use a secure XML parsing library -->
-        <!-- Example: Woodstox StAX parser -->
+        <!-- OWASP Top 10 2021 A4 - XML外部实体 (XXE) -->
+        <!-- 使用安全的XML解析库 -->
+        <!-- 示例: Woodstox StAX 解析器 -->
         <dependency>
             <groupId>org.codehaus.woodstox</groupId>
             <artifactId>woodstox-core-asl</artifactId>
             <version>4.4.1</version>
         </dependency>
 
-        <!-- OWASP Top 10 2021 A5 - Broken Access Control -->
-        <!-- Include a secure authorization library, for example, Apache Shiro -->
+        <!-- OWASP Top 10 2021 A5 - 破坏性访问控制 -->
+        <!-- 包含安全的授权库，例如Apache Shiro -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
             <version>1.7.1</version>
         </dependency>
 
-        <!-- OWASP Top 10 2021 A6 - Security Misconfiguration -->
-        <!-- Pay attention to security configurations in your application -->
-        <!-- No specific dependency here, ensure your application server and frameworks are properly configured -->
+        <!-- OWASP Top 10 2021 A6 - 安全配置错误 -->
+        <!-- 注意应用程序服务器和框架的安全配置 -->
 
-        <!-- OWASP Top 10 2021 A7 - Cross-Site Scripting (XSS) -->
-        <!-- Use secure HTML escaping libraries -->
-        <!-- Example: OWASP Java Encoder (already included above) -->
+        <!-- OWASP Top 10 2021 A7 - 跨站脚本攻击 (XSS) -->
+        <!-- 使用安全的HTML转义库 -->
+        <!-- 示例: OWASP Java Encoder (已在上面包含) -->
 
-        <!-- OWASP Top 10 2021 A8 - Insecure Deserialization -->
-        <!-- Use secure serialization/deserialization libraries -->
-        <!-- Example: Jackson Databind -->
+        <!-- OWASP Top 10 2021 A8 - 不安全的反序列化 -->
+        <!-- 使用安全的序列化/反序列化库 -->
+        <!-- 示例: Jackson Databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.12.5</version>
         </dependency>
 
-        <!-- OWASP Top 10 2021 A9 - Using Components with Known Vulnerabilities -->
-        <!-- Regularly check for updates and security patches for your dependencies -->
-        <!-- Use tools like OWASP Dependency-Check to identify vulnerabilities -->
-        <!-- Example: Dependency-Check Maven Plugin -->
-        <!-- Note: This is a plugin, not a runtime dependency -->
+        <!-- OWASP Top 10 2021 A9 - 使用已知漏洞的组件 -->
+        <!-- 定期检查依赖项的更新和安全补丁 -->
+        <!-- 使用类似OWASP Dependency-Check的工具来识别漏洞 -->
+        <!-- 示例: Dependency-Check Maven 插件 -->
+        <!-- 注意: 这是一个插件，不是运行时依赖项 -->
         <build>
             <plugins>
                 <plugin>
@@ -88,9 +87,9 @@
             </plugins>
         </build>
 
-        <!-- OWASP Top 10 2021 A10 - Insufficient Logging & Monitoring -->
-        <!-- Include a secure logging library and implement proper monitoring -->
-        <!-- Example: SLF4J with Logback -->
+        <!-- OWASP Top 10 2021 A10 - 不足的日志记录与监控 -->
+        <!-- 包含安全的日志记录库并实现适当的监控 -->
+        <!-- 示例: SLF4J 与 Logback -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -101,5 +100,23 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.6</version>
         </dependency>
+             <!-- Log4j中的远程代码注入 -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.11.2</version>
+            </dependency> 
+              <!-- 潜在风险: Spring Framework -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.3.29.RELEASE</version>
+    </dependency> 
+        <!-- 潜在风险: Apache Tomcat -->
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-catalina</artifactId>
+      <version>8.0.8</version>
+    </dependency>         
     </dependencies>
 </project>

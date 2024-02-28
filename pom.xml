@@ -20,7 +20,7 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
-            <version>5.5.0</version>
+            <version>5.5.7</version>
         </dependency>
 
         <!-- OWASP Top 10 2021 A3 - 敏感数据泄露 -->
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
-            <version>1.7.1</version>
+            <version>1.13.0</version>
         </dependency>
 
         <!-- OWASP Top 10 2021 A6 - 安全配置错误 -->
@@ -62,7 +62,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.12.5</version>
+            <version>2.12.7.1</version>
         </dependency>
 
         <!-- OWASP Top 10 2021 A9 - 使用已知漏洞的组件 -->
@@ -98,25 +98,25 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.6</version>
+            <version>1.2.13</version>
         </dependency>
              <!-- Log4j中的远程代码注入 -->
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>2.11.2</version>
+                <version>2.12.4</version>
             </dependency> 
               <!-- 潜在风险: Spring Framework -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>4.3.29.RELEASE</version>
+      <version>6.0.17</version>
     </dependency> 
         <!-- 潜在风险: Apache Tomcat -->
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-catalina</artifactId>
-      <version>8.0.8</version>
+      <version>8.5.96</version>
     </dependency>         
     </dependencies>
 </project>
